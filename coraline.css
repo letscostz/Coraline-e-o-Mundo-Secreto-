@@ -1,0 +1,67 @@
+/* Início do index.html */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+}
+
+.header {
+    height: 100px;
+    background-color: blueviolet;
+}
+
+.header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 120px;
+}
+
+.logo {
+    display: flex;
+    justify-content: space-between;
+    width: 200px;
+}
+
+.gato {
+    height: 70px;
+    width: 70px;
+}
+
+.titulo {
+    color: #FFFEFE;
+}
+
+.navbar { 
+    display: flex;
+    list-style: none;
+    width: 50%;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: bolder;
+}
+
+.navbar a {   
+    color: #f576d5;
+    outline: none;
+    font-weight: bolder;
+    text-decoration: none;
+}
+
+/*.agora {
+    font-weight: bolder;
+}*/
+
+.navbar .campo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    height: 30px;
+    width: 130px;
+    border-radius: 10px;
+}
+
