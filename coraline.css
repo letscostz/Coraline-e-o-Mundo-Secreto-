@@ -6,8 +6,7 @@
 
 body {
     margin: 0;
-    background-color: #73abfa;
-    background-image: url(img/fundo-home.jpeg);
+    background-image: url(assets/img/fundo-home.jpeg);
     object-fit: cover;
 }
 
@@ -92,10 +91,45 @@ body {
 }
  */
 
+.enredo {
+/*     background-color: #f576d5; */
+}
+
+.bloco {
+/*     background-color: rebeccapurple; */
+    height: 400px;
+    display: flex;
+    margin-top: 100px;
+    align-items: center;
+    padding: 10px 100px;
+    justify-content: space-around;
+}
+
+.bloco .imagem-home {
+    border-radius: 30px;
+    height: 90%;
+    width: 35%;
+}
+
+.bloco .paragrafo {
+    background-color: #59a2a8;
+    border-radius: 30px;
+    height: 90%;
+    width: 35%;
+    opacity: 0.8;
+}
+
+.bloco .paragrafo p {
+    color: white;
+    padding: 50px 50px;
+    font-size: 30px;
+    text-align: center;
+}
+
 .footer {
     background-color: #59a2a8;
     height: 200px;
-    margin-top: 800px;
+    margin-top: 300px;
 }
 
 .footer .gato {
@@ -131,4 +165,8 @@ body {
 /* Cores Salvas
 #59a2a8; -- verde água
 #1b3e96; -- azul marinho
+#f576d5; -- rosa médio
  */
+
+ /* Aqui acaba o index.html */
+ /* ------------------------------------------------------------------------------------------------------------------------------------------- */
