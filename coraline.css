@@ -6,7 +6,7 @@
 
 body {
     margin: 0;
-/*     background-image: url(assets/img/fundo-home.jpeg); */
+    background-image: url(assets/img/fundo-home.jpeg);
     object-fit: cover;
 }
 
@@ -127,10 +127,27 @@ body {
     text-align: center;
 }
 
+.sobre-mim {
+    background-color: #fab4df;
+    height: 600px;
+    margin-top: 200px;
+    display: flex;
+    padding: 20px 200px;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.foto-sobre-mim {
+    height: 450px;
+    width: 450px;
+    border-radius: 50%;
+    border: 5px solid black;
+    object-fit: cover;
+}
+
 .footer {
     background-color: #59a2a8;
     height: 200px;
-    margin-top: 300px;
 }
 
 .footer .gato {
@@ -171,3 +188,19 @@ body {
 
  /* Aqui acaba o index.html */
  /* ------------------------------------------------------------------------------------------------------------------------------------------- */
+
+ /* Aqui começa o login.html */
+
+ .login {
+    height: 900px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+ }
+
+ .container-login {
+    background-color: black;
+    height: 700px;
+    width: 65%;
+    border-radius: 50px;
+ }
