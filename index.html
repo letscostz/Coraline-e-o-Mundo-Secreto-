@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HOME</title>
+    <title>Mundo Secreto</title>
 
     <link rel="stylesheet" href="coraline.css">
     <link rel="icon" href="assets/icon/botão.png">
@@ -38,15 +38,27 @@
         </div>
     </div>
 
-<!--     <div class="capa">
-        <img src="assets/img/coraline-capa.jpg">
-    </div> -->
+    <div class="video-container">
+        <video autoplay loop controls poster="assets/img/palacio rosa.jpg">
+            <source src="assets/img/video-home.mp4">
+        </video>
+    </div>
+
+    <div class="carrossel">
+        <div class="container" id="img">
+            <img src="assets/img/ceu.jpg">
+            <img src="assets/img/coraline-cozinha.jpg">
+            <img src="assets/img/coraline-portal.jpg">
+            <img src="assets/img/outra familia.jpg">
+            <img src="assets/img/porta.jpg">
+        </div>
+    </div>
    
 
   <!--   <div class="home-titulo">
         <img src="img/coraline-titulo-home.png">
     </div> -->
-
+<!-- 
     <div class="enredo">
         <div class="bloco">
             <img class="imagem-home" src="assets/img/palacio rosa.jpg">
@@ -90,7 +102,7 @@
             <img class="botao" src="assets/icon/botão.png">
             <img class="imagem-home" src="assets/img/ceu.jpg">
         </div>
-    </div>
+    </div> -->
 
     <div class="sobre-mim">
         <img class="foto-sobre-mim" src="assets/img/png">
@@ -112,3 +124,24 @@
 </body>
 
 </html>
+
+<script>
+
+    var imgs = document.getElementById("img");
+    var img = document.querySelectorAll("#img img");
+
+    var i = 0; // constante
+
+    function carrossel() {
+        i++;
+
+        if(i > img.length - 1) {
+            i = 0;
+        }
+
+        img.style.transform = `translateX(${-i * 500}px)`;
+    }
+
+    setInterval(carrossel, 2000);
+    
+</script>

@@ -6,7 +6,7 @@
 
 body {
     margin: 0;
-    background-image: url(assets/img/fundo-home.jpeg);
+    /* background-image: url(assets/img/fundo-home.jpeg); */
     object-fit: cover;
 }
 
@@ -14,6 +14,11 @@ body {
     height: 100px;
     background-color: #59a2a8;
     /* border-bottom: 3px solid white; */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 2;
 }
 
 .header .container {
@@ -66,20 +71,41 @@ body {
     height: 30px;
     width: 130px;
     border-radius: 10px;
+    box-shadow: 2px 2px 4px black;
 }
 
-.capa {
-    width: 100%;
+.video-container {
+    height: 800px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.video-container video {
+    height: 400px;
+    padding: 10px 200px;
+}
+
+.carrossel {
+    box-shadow: 2px 2px 4px black;
+    overflow: hidden;
     height: 500px;
-    background-color: #f576d5;
-    margin-left: 50%;
+    width: 500px;
+    background-color: #59a2a8;
 }
 
-.capa img {
-    width: 50%;
-    height: 100%;
-    display: flex;  
+.carrossel .container {
+    display: flex;
+    transition: transform 0.5 ease-in-out;
+    transform: translateX(0);
 }
+
+.carrossel .container img{
+    object-fit: cover;
+    height: 500px;
+    width: 500px;
+}
+
 
 /* .home-titulo {
     display: flex;
@@ -129,17 +155,17 @@ body {
 
 .sobre-mim {
     background-color: #fab4df;
-    height: 600px;
+    height: 800px;
     margin-top: 200px;
     display: flex;
-    padding: 20px 200px;
+    padding: 10px 100px;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: space-around;
 }
 
 .foto-sobre-mim {
-    height: 450px;
-    width: 450px;
+    height: 600px;
+    width: 600px;
     border-radius: 50%;
     border: 5px solid black;
     object-fit: cover;
