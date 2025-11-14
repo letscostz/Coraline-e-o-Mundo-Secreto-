@@ -12,7 +12,7 @@ body {
 
 .header {
     height: 100px;
-    background-color: #59a2a8;
+    background-color: #59a1a823;
     /* border-bottom: 3px solid white; */
     position: fixed;
     top: 0;
@@ -75,15 +75,53 @@ body {
 }
 
 .video-container {
-    height: 800px;
+    height: 100vh;
     display: flex;
     justify-content: flex-end;
     align-items: center;
+    background-color: #a0b8aa;
+    padding: 10px 100px;
 }
 
 .video-container video {
     height: 400px;
-    padding: 10px 200px;
+}
+
+.bloco1 {
+    background-color: #236c99;
+    height: 100vh;
+    display: flex;
+    justify-content: space-around;
+    padding: 10px 150px;
+}
+
+.bloco1 .texto {
+    height: 400px;
+    margin-top: 300px;
+}
+
+.bloco1 .coraline {
+    margin-top: 105px;
+    height: 900px;
+}
+
+.bloco2 {
+    background-color: #eaeaea;
+    height: 100vh;
+}
+
+.bloco3 {
+    background-color: #e8bb77;
+    height: 100vh;
+}
+
+.bloco4 {
+    background-color: #a3cbff;
+    height: 100vh;
+}
+
+p {
+    margin: 0;
 }
 
 .carrossel {
@@ -155,8 +193,7 @@ body {
 
 .sobre-mim {
     background-color: #fab4df;
-    height: 800px;
-    margin-top: 200px;
+    height: 100vh;
     display: flex;
     padding: 10px 100px;
     align-items: center;
