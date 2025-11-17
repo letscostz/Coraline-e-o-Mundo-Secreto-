@@ -30,11 +30,12 @@ body {
     display: flex;
     justify-content: space-around;
     width: 300px;
+    align-items: center;
 }
 
 .botao {
-    width: 70px;
-    height: 70px;
+    width: 60px;
+    height: 60px;
 }
 
 .titulo {
@@ -70,6 +71,11 @@ body {
     width: 140px;
     border-radius: 10px;
     box-shadow: 2px 2px 4px black;
+}
+
+.chave {
+    height: 50px;
+    margin-left: 30px;
 }
 
 
@@ -215,9 +221,10 @@ body {
     transform: rotate(-15deg);
 }
 
-
 .bloco4 {
     background-color: #fab4df;
+    object-fit: cover;
+/*     background-image: url(assets/img/fundo\ rosa.jpg); */
     height: 100vh;
     position: relative;
     display: flex;
@@ -306,6 +313,7 @@ p {
     justify-content: space-between;
     z-index: 3;
     position: relative;
+    border-bottom: 2px solid white;
 }
 
 .sobre-mim .texto {
@@ -383,15 +391,142 @@ p {
  /* Aqui começa o login.html */
 
  .login {
-    height: 900px;
+    height: 100vh;
     display: flex;
-    justify-content: center;
-    align-items: center;
+ }
+
+ .login img {
+    height: 100vh;
+    width: 100vh;
+    object-fit: cover;
  }
 
  .container-login {
-    background-color: black;
-    height: 700px;
-    width: 65%;
-    border-radius: 50px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding: 10px 200px;
+    text-align: center;
+    align-items: center;
  }
+
+ .titulo-login {
+    font-size: 30px;
+    color: #370654;
+ }
+
+ .campo {
+    height: 100px;
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    text-align: start;
+ }
+
+ .campo span {
+    font-size: 20px;
+    color: #370654;
+ }
+ 
+ .campo input {
+    background-color: #7e61b8;
+    height: 40px;
+    width: 100%;
+    border-radius: 10px;
+    border-style: none;
+    border: 2px solid #370654;
+ }
+
+ .login button {
+    background-color: #370654;
+    height: 40px;
+    width: 25%;
+    border-radius: 10px;
+    color: white;
+    font-size: 20px;
+ }
+
+ .mensagem {
+  display: flex;
+  width: 500px;
+  font-size: 20px;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  height: 20px;
+  color: #b49001;
+}
+
+.mensagem a {
+  color: #b49001;
+  outline: none;
+  text-decoration: none;
+  font-weight: bolder;
+}
+
+.container-login .estrela1 {
+    z-index: 2;
+    position: absolute;
+    height: 7%;
+    width: 7%;
+    top: 10%;
+    right: 40%;
+    transform: rotate(-5deg);
+}
+
+.container-login .estrela2 {
+    z-index: 2;
+    position: absolute;
+    height: 7%;
+    width: 7%;
+    top: 50%;
+    right: 45%;
+    transform: rotate(15deg);
+}
+
+.container-login .estrela3 {
+    z-index: 2;
+    position: absolute;
+    height: 7%;
+    width: 7%;
+    bottom: 45%;
+    right: 5%;
+    transform: rotate(-10deg);
+}
+
+.container-login .estrela4 {
+    z-index: 2;
+    position: absolute;
+    height: 7%;
+    width: 7%;
+    bottom: 0%;
+    left: 50%;
+}
+
+.container-login .estrela5 {
+    z-index: 2;
+    position: absolute;
+    height: 7%;
+    width: 7%;
+    bottom: 10%;
+    right: 0%;
+    transform: rotate(20deg);
+}
+
+.container-login .estrela6 {
+    z-index: 2;
+    position: absolute;
+    height: 7%;
+    width: 7%;
+    top: 5%;
+    right: 5%;
+    transform: rotate(-15deg);
+}
+
+.container-login .chave {
+    height: 50px;
+    width: 50px;
+    transform: rotate(90deg);
+}
