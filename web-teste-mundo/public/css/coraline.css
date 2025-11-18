@@ -1,0 +1,533 @@
+/* Início do index.html */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0; 
+}
+
+.header {
+    height: 100px;
+    background-color: transparent;
+    /* border-bottom: 3px solid white; */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 10;
+}
+
+.header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 120px;
+}
+
+.logo {
+    display: flex;
+    justify-content: space-around;
+    width: 300px;
+    align-items: center;
+}
+
+.botao {
+    width: 60px;
+    height: 60px;
+}
+
+.titulo {
+    color: #FFFEFE;
+}
+
+.navbar { 
+    display: flex;
+    list-style: none;
+    width: 70%;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: bolder;
+}
+
+.navbar a {   
+    color: #f576d5;
+    outline: none;
+    font-weight: bolder;
+    text-decoration: none;
+}
+
+/*.agora {
+    font-weight: bolder;
+}*/
+
+.navbar .campo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    height: 30px;
+    width: 140px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 4px black;
+}
+
+.chave {
+    height: 50px;
+    margin-left: 30px;
+}
+
+
+.bloco1 {
+    background-color: #236c99;
+    height: 100vh;
+    display: flex;
+    justify-content: space-around;
+    padding: 10px 150px;
+}
+
+.bloco1 .texto {
+    height: 400px;
+    margin-top: 300px;
+}
+
+.bloco1 .coraline {
+    margin-top: 107px;
+    height: 900px;
+}
+
+.bloco1 .estrela1 {
+    z-index: 2;
+    position: absolute;
+    height: 200px;
+    top: 15%;
+    left: 35%;
+}
+
+.bloco1 .estrela2 {
+    z-index: 2;
+    position: absolute;
+    height: 200px;
+    top: 7%;
+    left: 2%;
+}
+
+.bloco1 .estrela3 {
+    z-index: 2;
+    position: absolute;
+    height: 200px;
+    bottom: 2%;
+    left: 7%;
+}
+
+.bloco1 .estrela4 {
+    z-index: 2;
+    position: absolute;
+    height: 200px;
+    bottom: 10%;
+    left: 45%;
+}
+
+.bloco1 .estrela5 {
+    z-index: 2;
+    position: absolute;
+    height: 200px;
+    bottom: 2%;
+    right: 2%;
+}
+
+.bloco1 .estrela6 {
+    z-index: 2;
+    position: absolute;
+    height: 200px;
+    top: 5%;
+    right: 5%;
+}
+
+.bloco2 {
+    height: 100vh;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    background-color: #a0b8aa;
+    padding: 10px 100px;
+    position: relative;
+}
+
+.bloco2 p {
+    text-align: center;
+    font-size: 30px;
+    height: 350px;
+    padding: 10px 125px;
+}
+
+.bloco2 video {
+    height: 400px;
+}
+
+.bloco2 .mae {
+    height: 500px;
+    z-index: 3;
+    position: absolute;
+    bottom: -10%;
+    left: 10%;
+}
+
+.bloco2 .pai {
+    height: 500px;
+    z-index: 2;
+    position: absolute;
+    bottom: -10%;
+    left: 0%;
+}
+
+.bloco3 {
+    background-image: url(../assets/img/papel\ amassado\ textura2.jpeg);
+    object-fit: cover;
+    height: 100vh;
+    z-index: 3;
+    position: relative;
+    padding: 300px 100px;
+}
+
+.bloco3 p {
+    text-align: start;
+    height: 500px;
+    width: 50%;
+    font-size: 40px;
+    padding: 30px 100px;
+}
+
+.bloco3 .wybie {
+    height: 700px;
+    position: absolute;
+    bottom: 0%;
+    right: 0%;
+}
+
+.bloco3 .laika {
+    height: 100px;
+    position: absolute;
+    left: 10%;
+    top: 10%;
+}
+
+.bloco3 .carta {
+    height: 200px;
+    position: absolute;
+    top: 15%;
+    right: 25%;
+    transform: rotate(-15deg);
+}
+
+.bloco4 {
+    background-color: #fab4df;
+    object-fit: cover;
+/*     background-image: url(assets/img/fundo\ rosa.jpg); */
+    height: 100vh;
+    position: relative;
+    display: flex;
+    text-align: end;
+    align-items: center;
+    padding: 10px 100px;
+}
+
+.bloco4 .texto {
+    height: 600px;
+    width: 50%;
+    margin-left: 60%;
+}
+
+.bloco4 .titulo-sinopse {
+    font-size: 50px;
+    width: 30%;
+    font-weight: bold;
+    margin-left: 450px;
+}
+
+.bloco4 .texto-sinopse {
+    font-size: 40px;
+    margin-top: 100px;
+    margin-left: 100px;
+    width: 82%;
+    height: 400px;
+}
+
+.bloco4 .spink_forcible {
+    height: 500px;
+    bottom: 0%;
+    position: absolute;
+}
+
+.bloco5 {
+    background-color: #e8bb77;
+    height: 100vh;
+    position: relative;
+}
+
+.bloco5 .bobinsky {
+    height: 500px;
+    position: absolute;
+    right: 0%;
+    bottom: -5%;
+}
+
+.bloco5 .bobinsky_placa {
+    height: 300px;
+    position: absolute;
+    left: 2%;
+    top: 5%;
+}
+
+p {
+    margin: 0;
+}
+
+/* .carrossel {
+    box-shadow: 2px 2px 4px black;
+    overflow: hidden;
+    height: 500px;
+    width: 500px;
+    background-color: #59a2a8;
+}
+
+.carrossel .container {
+    display: flex;
+    transition: transform 0.5 ease-in-out;
+    transform: translateX(0);
+}
+
+.carrossel .container img{
+    object-fit: cover;
+    height: 500px;
+    width: 500px;
+} */
+
+.sobre-mim {
+    background-color: #a3cbff;
+    height: 100vh;
+    display: flex;
+    padding: 10px 100px;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 3;
+    position: relative;
+    border-bottom: 2px solid white;
+}
+
+.sobre-mim .texto {
+    height: 500px;
+    width: 50%;
+    margin-left: 150px;
+}
+
+.foto-sobre-mim {
+    height: 600px;
+    width: 600px;
+    border-radius: 50%;
+    border: 5px solid black;
+    object-fit: cover;
+    margin-left: 100px;
+}
+
+.sobre-mim .titulo-sobre-mim {
+    font-size: 50px;
+    width: 30%;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+.sobre-mim .texto-sobre-mim {
+    font-size: 40px;
+    margin-top: 50px;
+    width: 80%;
+}
+
+.footer {
+    background-color: #59a2a8;
+    height: 200px;
+}
+
+.footer .gato {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-end;
+    padding: 0px 80px;
+    width: 30%;
+    height: 200px;
+}
+
+.footer .gato img {
+    height: 120px;
+    width: 100px;
+}
+
+.footer .redes-sociais {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: flex-end;
+    width: 10%;
+    height: 200px;
+    margin-left: 85%;
+    margin-top: -200px;
+} 
+
+.footer .redes-sociais img {
+    height: 50px;
+    width: 50px;
+    margin: 10px;
+}
+
+/* Cores Salvas
+#59a2a8; -- verde água
+#1b3e96; -- azul marinho
+#f576d5; -- rosa médio
+ */
+
+ /* Aqui acaba o index.html */
+ /* ------------------------------------------------------------------------------------------------------------------------------------------- */
+
+ /* Aqui começa o login.html */
+
+ .login {
+    height: 100vh;
+    display: flex;
+ }
+
+ .login img {
+    height: 100vh;
+    width: 100vh;
+    object-fit: cover;
+ }
+
+ .container-login {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding: 10px 200px;
+    text-align: center;
+    align-items: center;
+    background-color: white;
+ }
+
+ .titulo-login {
+    font-size: 30px;
+    color: #370654;
+ }
+
+ .campo {
+    height: 100px;
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    text-align: start;
+ }
+
+ .campo span {
+    font-size: 20px;
+    color: #370654;
+ }
+ 
+ .campo input {
+    background-color: #7e61b8;
+    height: 40px;
+    width: 100%;
+    border-radius: 10px;
+    border-style: none;
+    border: 2px solid #370654;
+ }
+
+ .login button {
+    background-color: #370654;
+    height: 40px;
+    width: 25%;
+    border-radius: 10px;
+    color: white;
+    font-size: 20px;
+ }
+
+ .mensagem {
+  display: flex;
+  width: 500px;
+  font-size: 20px;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  height: 20px;
+  color: #b49001;
+}
+
+.mensagem a {
+  color: #b49001;
+  outline: none;
+  text-decoration: none;
+  font-weight: bolder;
+}
+
+.container-login .estrela1 {
+    z-index: 2;
+    position: absolute;
+    height: 7%;
+    width: 7%;
+    top: 10%;
+    right: 40%;
+    transform: rotate(-5deg);
+}
+
+.container-login .estrela2 {
+    z-index: 2;
+    position: absolute;
+    height: 7%;
+    width: 7%;
+    top: 50%;
+    right: 45%;
+    transform: rotate(15deg);
+}
+
+.container-login .estrela3 {
+    z-index: 2;
+    position: absolute;
+    height: 7%;
+    width: 7%;
+    bottom: 45%;
+    right: 5%;
+    transform: rotate(-10deg);
+}
+
+.container-login .estrela4 {
+    z-index: 2;
+    position: absolute;
+    height: 7%;
+    width: 7%;
+    bottom: 0%;
+    left: 50%;
+}
+
+.container-login .estrela5 {
+    z-index: 2;
+    position: absolute;
+    height: 7%;
+    width: 7%;
+    bottom: 10%;
+    right: 0%;
+    transform: rotate(20deg);
+}
+
+.container-login .estrela6 {
+    z-index: 2;
+    position: absolute;
+    height: 7%;
+    width: 7%;
+    top: 5%;
+    right: 5%;
+    transform: rotate(-15deg);
+}
+
+.container-login .chave {
+    height: 50px;
+    width: 50px;
+    transform: rotate(90deg);
+}

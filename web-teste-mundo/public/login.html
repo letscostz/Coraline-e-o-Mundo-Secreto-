@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LOGIN</title>
+
+    <script src="./js/sessao.js"></script>
+
+    <link rel="stylesheet" href="css/coraline.css">
+    <link rel="stylesheet" href="css/estilo.css">
+    <link rel="icon" href="assets/icon/botão.png">
+
+</head>
+<body>
+
+
+    <div class="login">
+         <!--    <video autoplay loop muted poster="assets/img/palacio rosa.jpg">
+                <source src="assets/img/portal-editado.mp4">
+            </video> -->
+            <img class="portal" src="assets/img/portal.jpg">
+            <div class="alerta_erro">
+                <div class="card_erro" id="cardErro">
+                    <span id="mensagem_erro"></span>
+                </div>
+            </div>
+        <div class="container-login">
+            <div class="titulo-login">
+                <h2>LOGIN</h2>
+            </div>
+                <div class="campo">
+                    <span>Email:</span>
+                    <input type="text" id="input_email">
+                </div>
+                <div class="campo">
+                    <span>Senha:</span>
+                    <input type="password" id="input_senha">
+                </div>
+
+                <button onclick="entrar()">Abrir a Porta</button>
+
+             <!--    <div id="div_aguardar" class="loading-div">
+                    <img src="./assets/circle-loading.gif" id="loading-gif">
+                </div>
+ -->
+                <!-- <div id="div_erros_login"></div> -->
+
+                <div class="mensagem">
+                    <span>
+                        Você ainda não possui uma conta? Cadastre-se
+                        <a href="cadastro.html"><b>Aqui</b></a>
+                    </span>
+                </div>
+                <img class="estrela1" src="assets/img/estrela.png">
+                <img class="estrela2" src="assets/img/estrela.png">
+                <img class="estrela3" src="assets/img/estrela.png">
+                <img class="estrela4" src="assets/img/estrela.png">
+                <img class="estrela5" src="assets/img/estrela.png">
+                <img class="estrela6" src="assets/img/estrela.png">
+                <a href="index.html"><img class="chave" src="assets/img/chave.png"></a>
+        </div>
+    </div>
+    
+</body>
+</html>
+
+<script>
+
+
+    function entrar() {
+        //aguardar();
+
+        var emailVar = input_email.value;
+        var senhaVar = input_senha.value;
+
+        if (emailVar == "" || senhaVar == "") {
+            //cardErro.style.display = "block"
+            //mensagem_erro.innerHTML = "(Mensagem de erro para todos os campos em branco)";
+            //finalizarAguardar();
+            return false;
+        }
+        /* else {
+            setInterval(sumirMensagem, 5000)
+        } */
+
+        console.log("FORM LOGIN: ", emailVar);
+        console.log("FORM SENHA: ", senhaVar);
+
+        fetch("/usuarios/autenticar", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({
+                emailServer: emailVar,
+                senhaServer: senhaVar
+            })
+        }).then(function (resposta) {
+            console.log("ESTOU NO THEN DO entrar()!")
+
+            if (resposta.ok) {
+                console.log(resposta);
+
+                resposta.json().then(json => {
+                    console.log(json);
+                    console.log(JSON.stringify(json));
+                    sessionStorage.EMAIL_USUARIO = json.email;
+                    sessionStorage.NOME_USUARIO = json.nome;
+                    sessionStorage.ID_USUARIO = json.idUsuario;
+                    //sessionStorage.AQUARIOS = JSON.stringify(json.aquarios)
+
+                    setTimeout(function () {
+                        window.location = "index.html";
+                    }, 1000); // apenas para exibir o loading
+
+                });
+
+            } else {
+
+                console.log("Houve um erro ao tentar realizar o login!");
+
+                resposta.text().then(texto => {
+                    console.error(texto);
+                    //finalizarAguardar(texto);
+                });
+            }
+
+        }).catch(function (erro) {
+            console.log(erro);
+        })
+
+        return false;
+    }
+
+ /*    function sumirMensagem() {
+        cardErro.style.display = "none"
+    } */
+
+</script>
