@@ -404,6 +404,7 @@
         btnTentarNovamente.disabled = false
 
         var qtdAcertos = pontuacaoFinal;
+        var fkUsuario = sessionStorage.ID_USUARIO;
         console.log(qtdAcertos);
 
          // Enviando o valor da nova input
@@ -415,7 +416,8 @@
             body: JSON.stringify({
                 // crie um atributo que recebe o valor recuperado aqui
                 // Agora vá para o arquivo routes/usuario.js
-                acertosServer: qtdAcertos
+                acertosServer: qtdAcertos,
+                idUsuario: fkUsuario
             }),
             })
             .then(function (resposta) {

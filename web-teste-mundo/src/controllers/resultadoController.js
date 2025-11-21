@@ -2,10 +2,10 @@ var resultadoModel = require("../models/resultadoModel");
 
 function inserirResultado(req, res) {
     console.log(`BODY: ${req.body}`)
-    var idUsuario = req.params.idUsuario; // req
+    var idUsuario = req.body.idUsuario; // req
     var qtdAcertos = req.body.acertosServer; // req
 
-    if (fkUsuario == undefined) {
+    if (idUsuario == undefined) {
         res.status(400).send("fkUsuario está undefined!");
     } else if (qtdAcertos == undefined) {
         res.status(400).send("qtdAcertos está undefined!");
