@@ -56,9 +56,9 @@ alternativa VARCHAR(100),
 );
 
 CREATE TABLE resultado (
-idResultado INT,
+idResultado INT AUTO_INCREMENT,
 fkUsuario INT,
-fkQuiz INT,
+fkQuiz INT DEFAULT 1,
 qtdAcertos INT,
 	CONSTRAINT fkResultadoUsuario
 		FOREIGN KEY (fkUsuario) REFERENCES usuario (idUsuario),
