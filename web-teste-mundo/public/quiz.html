@@ -10,6 +10,44 @@
 
 
 <body onload="onloadEsconder()">
+
+    <div class="header-outro-mundo">
+        <div class="container">
+            <div class="logo">
+            <a href="index.html"><img class="botao" src="assets/icon/botão.png"></a>
+            <h1 class="titulo">Mundo Secreto</h1>
+            </div>
+
+            <ul class="navbar">
+            <li class="campo">
+                <a href="quiz.html">QUIZ</a>
+            </li>
+
+            <li class="campo">
+                <a href="dashboard/dashboard.html">DASHBOARD</a>
+            </li>
+<!-- 
+            <li class="campo">
+                <a href="#bloco4">SINOPSE</a>
+            </li>
+            
+            <li class="campo">
+                <a href="#bloco5">CARROSSEL</a>
+            </li>
+
+            <li class="campo">
+                <a href="#sobre-mim">SOBRE MIM</a>
+            </li> -->
+
+          <!--   <li class="campo">
+                <a href="login.html">OUTRO MUNDO</a>
+            </li> -->
+            </ul>
+
+            <a href="index.html"><img class="chave" src="assets/img/chave.png"></a>
+        </div>
+    </div>
+
     <div id="pontuacaoEJogo" class="jogo">
         <button class="iniciar" id="btnIniciarQuiz" onclick="iniciarQuiz()">INICIAR QUIZ</button>
 
@@ -266,7 +304,7 @@
 
         desmarcarRadioButtons()
 
-        if (numeroDaQuestaoAtual < quantidadeDeQuestoes - 1) {
+        if (numeroDaQuestaoAtual <= quantidadeDeQuestoes - 1) {
             preencherHTMLcomQuestaoAtual(numeroDaQuestaoAtual)
         /* } else if (numeroDaQuestaoAtual == quantidadeDeQuestoes - 1) {
             alert("Atenção... a próxima é a ultima questão!")
@@ -365,5 +403,45 @@
         // btnConcluir.disabled = true
         btnTentarNovamente.disabled = false
 
-    }
+        var qtdAcertos = pontuacaoFinal;
+        console.log(qtdAcertos);
+
+         // Enviando o valor da nova input
+            fetch("/resultados/inserirResultado", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+            },
+            body: JSON.stringify({
+                // crie um atributo que recebe o valor recuperado aqui
+                // Agora vá para o arquivo routes/usuario.js
+                acertosServer: qtdAcertos
+            }),
+            })
+            .then(function (resposta) {
+                console.log("resposta: ", resposta);
+
+                if (resposta.ok) {
+                    console.log("Tudo ok!");
+                //cardErro.style.display = "block";
+
+               /*  setTimeout(() => {
+                    window.location = "login.html";
+                }, "2000"); */
+
+                //limparFormulario();
+                //finalizarAguardar();
+                } else {
+                throw "Houve um erro ao tentar realizar o cadastro!";
+                }
+            })
+            .catch(function (resposta) {
+                console.log(`#ERRO: ${resposta}`);
+                //finalizarAguardar();
+            });
+
+            return false;
+        }
+
+
 </script>

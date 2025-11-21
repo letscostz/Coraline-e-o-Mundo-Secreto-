@@ -1,8 +1,12 @@
 var database = require("../database/config");
 
-function inserirResultado(qtdAcertos) { // variavel
+function inserirResultado(fkUsuario, qtdAcertos) { // variavel definição
 
-    var instrucaoSql = `INSERT INTO resultado (idResultado, fkUsuario, qtdAcertos) VALUES ('${qtdAcertos}')`;
+    console.log("ACESSEI O RESULTADO MODEL");
+
+    var instrucaoSql = `
+        INSERT INTO resultado (fkUsuario, qtdAcertos) VALUES ('${fkUsuario}', '${qtdAcertos}'); 
+    `;
 
     console.log("Executando a instrução SQL: \n" + instrucaoSql);
     return database.executar(instrucaoSql);
