@@ -2,7 +2,7 @@ var resultadoModel = require("../models/resultadoModel");
 
 function inserirResultado(req, res) {
     console.log(`BODY: ${req.body}`)
-    var fkUsuario = req.body.fkUsuario; // req
+    var idUsuario = req.params.idUsuario; // req
     var qtdAcertos = req.body.acertosServer; // req
 
     if (fkUsuario == undefined) {
@@ -11,7 +11,7 @@ function inserirResultado(req, res) {
         res.status(400).send("qtdAcertos está undefined!");
     } else {
 
-        resultadoModel.inserirResultado(fkUsuario, qtdAcertos)
+        resultadoModel.inserirResultado(idUsuario, qtdAcertos)
             .then(
                 function (resultado) {
                     res.json(resultado);
