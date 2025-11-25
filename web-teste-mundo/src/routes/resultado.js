@@ -7,6 +7,10 @@ var resultadoController = require("../controllers/resultadoController");
 
 router.post("/inserirResultado", function (req, res) {
     resultadoController.inserirResultado(req, res);
-})
+}) // inserir dados do quiz no banco de dados
+
+router.get("/exibirResultado", function (req, res) {
+    resultadoController.exibirResultado(req, res);
+});
 
 module.exports = router;

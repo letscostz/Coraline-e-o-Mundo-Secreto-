@@ -402,6 +402,10 @@ p {
     object-fit: cover;
  }
 
+ .login video {
+    width: 100%;
+    object-fit: cover;
+ }
  .container-login {
     width: 100%;
     display: flex;

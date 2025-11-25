@@ -29,6 +29,24 @@ function inserirResultado(req, res) {
     }
 }
 
+function exibirResultado(req, res) {
+  var idUsuario = req.body.idUsuario; // body ou params
+
+  resultadoModel.exibirResultado(idUsuario).then((resultado) => {
+    if (resultado.length > 0) {
+      res.status(200).json(resultado);
+    } else {
+      res.status(204).json([]);
+    }
+  }).catch(function (erro) {
+    console.log(erro);
+    console.log("Houve um erro ao exibir o resultado: ", erro.sqlMessage);
+    res.status(500).json(erro.sqlMessage);
+  });
+}
+
+
 module.exports = {
-    inserirResultado
+    inserirResultado,
+    exibirResultado
 }

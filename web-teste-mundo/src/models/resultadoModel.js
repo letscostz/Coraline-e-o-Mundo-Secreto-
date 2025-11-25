@@ -12,6 +12,15 @@ function inserirResultado(idUsuario, qtdAcertos) { // variavel definição
     return database.executar(instrucaoSql);
 }
 
+function exibirResultado(idUsuario) {
+
+  var instrucaoSql = `SELECT * FROM resultado WHERE fkUsuario = ${idUsuario} ORDER BY idResultado DESC LIMIT 1`;
+
+  console.log("Executando a instrução SQL: \n" + instrucaoSql);
+  return database.executar(instrucaoSql);
+}
+
 module.exports = {
-    inserirResultado
+    inserirResultado,
+    exibirResultado
 };
