@@ -151,3 +151,11 @@ INSERT INTO alternativas (idAlternativa, fkPergunta, alternativa) VALUES
 (3, 10, 'Mostrou versões perfeitas de suas vidas'),
 (4, 10, 'Fez promessas sobre seus pais'),
 (5, 10, 'Deu brinquedos amaldiçoados');
+
+SELECT * FROM usuario;
+SELECT * FROM resultado;
+SELECT * FROM resultado 
+WHERE fkUsuario = 1
+ORDER BY idResultado DESC LIMIT 1;
+INSERT INTO resultado VALUES
+(4, 1, 1, 5);

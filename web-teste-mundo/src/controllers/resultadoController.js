@@ -30,9 +30,14 @@ function inserirResultado(req, res) {
 }
 
 function exibirResultado(req, res) {
+
+  const limite_linhas = 7;
+
   var idUsuario = req.body.idUsuario; // body ou params
 
-  resultadoModel.exibirResultado(idUsuario).then((resultado) => {
+  console.log(`Recuperando as ultimas ${limite_linhas} medidas`);
+
+  resultadoModel.exibirResultado(idUsuario, limite_linhas).then((resultado) => {
     if (resultado.length > 0) {
       res.status(200).json(resultado);
     } else {
