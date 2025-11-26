@@ -14,19 +14,19 @@
     <div class="header-outro-mundo">
         <div class="container">
             <div class="logo">
-            <a href="index.html"><img class="botao" src="assets/icon/botão.png"></a>
-            <h1 class="titulo">Mundo Secreto</h1>
+                <a href="index.html"><img class="botao" src="assets/icon/botão.png"></a>
+                <h1 class="titulo">Mundo Secreto</h1>
             </div>
 
             <ul class="navbar">
-            <li class="campo">
-                <a href="quiz.html">QUIZ</a>
-            </li>
+                <li class="campo">
+                    <a href="quiz.html">QUIZ</a>
+                </li>
 
-            <li class="campo">
-                <a href="dashboard/dashboard.html">DASHBOARD</a>
-            </li>
-<!-- 
+                <li class="campo">
+                    <a href="dashboard/dashboard.html">DASHBOARD</a>
+                </li>
+                <!-- 
             <li class="campo">
                 <a href="#bloco4">SINOPSE</a>
             </li>
@@ -39,7 +39,7 @@
                 <a href="#sobre-mim">SOBRE MIM</a>
             </li> -->
 
-          <!--   <li class="campo">
+                <!--   <li class="campo">
                 <a href="login.html">OUTRO MUNDO</a>
             </li> -->
             </ul>
@@ -306,9 +306,9 @@
 
         if (numeroDaQuestaoAtual <= quantidadeDeQuestoes - 1) {
             preencherHTMLcomQuestaoAtual(numeroDaQuestaoAtual)
-        /* } else if (numeroDaQuestaoAtual == quantidadeDeQuestoes - 1) {
-            alert("Atenção... a próxima é a ultima questão!")
-            preencherHTMLcomQuestaoAtual(numeroDaQuestaoAtual) */
+            /* } else if (numeroDaQuestaoAtual == quantidadeDeQuestoes - 1) {
+                alert("Atenção... a próxima é a ultima questão!")
+                preencherHTMLcomQuestaoAtual(numeroDaQuestaoAtual) */
         } else {
             finalizarJogo()
         }
@@ -389,14 +389,14 @@
             classComCoresParaMensagemFinal = "text-success-with-bg"
         }
 
-        textoParaMensagemFinal += "<br> Você acertou " + Math.round((porcentagemFinalDeAcertos)*100) + "% das questões."
+        textoParaMensagemFinal += "<br> Você acertou " + Math.round((porcentagemFinalDeAcertos) * 100) + "% das questões."
 
 
         document.getElementById('msgFinal').innerHTML = textoParaMensagemFinal
-        document.getElementById('msgFinal').classList.add(classComCoresParaMensagemFinal) 
+        document.getElementById('msgFinal').classList.add(classComCoresParaMensagemFinal)
         document.getElementById('spanPontuacaoFinal').innerHTML = pontuacaoFinal
 
-        document.getElementById('jogo').classList.add("text-new-gray") 
+        document.getElementById('jogo').classList.add("text-new-gray")
 
         btnProx.disabled = true
         btnSubmeter.disabled = true
@@ -408,8 +408,8 @@
         var idResultadoVar = sessionStorage.ID_RESULTADO;
         console.log(qtdAcertos);
 
-         // Enviando o valor da nova input
-            fetch("/resultados/inserirResultado", {
+        // Enviando o valor da nova input
+        fetch("/resultados/inserirResultado", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
@@ -418,25 +418,17 @@
                 // crie um atributo que recebe o valor recuperado aqui
                 // Agora vá para o arquivo routes/usuario.js
                 acertosServer: qtdAcertos,
-                idUsuario: fkUsuario,
-                idResultado: idResultadoVar
+                idUsuario: fkUsuario
             }),
-            })
+        })
             .then(function (resposta) {
                 console.log("resposta: ", resposta);
 
                 if (resposta.ok) {
                     console.log("Tudo ok!");
-                //cardErro.style.display = "block";
-
-               /*  setTimeout(() => {
-                    window.location = "login.html";
-                }, "2000"); */
-
-                //limparFormulario();
-                //finalizarAguardar();
+         
                 } else {
-                throw "Houve um erro ao tentar realizar o cadastro!";
+                    throw "Houve um erro ao tentar realizar o cadastro!";
                 }
             })
             .catch(function (resposta) {
@@ -444,8 +436,40 @@
                 //finalizarAguardar();
             });
 
-            return false;
-        }
+
+        fetch("/resultados/capturarId", {
+            method: "GET",
+            headers: {
+                "Content-Type": "application/json",
+            },
+            body: JSON.stringify({
+                idResultado: idResultadoVar
+
+            }),
+        })
+            .then(function (resposta) {
+                console.log("resposta: ", resposta);
+
+                if (resposta.ok) {
+                    console.log("Tudo ok!");
+                    
+                    resposta.json().then(json => {
+                    console.log(json);
+                    console.log(JSON.stringify(json));
+                    sessionStorage.ID_RESULTADO = idResultado;
+                });
+
+                } else {
+                    throw "Houve um erro ao tentar realizar o cadastro!";
+                }
+            })
+            .catch(function (resposta) {
+                console.log(`#ERRO: ${resposta}`);
+                //finalizarAguardar();
+            });
+
+        return false;
+    }
 
 
 </script>
