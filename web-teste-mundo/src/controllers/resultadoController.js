@@ -29,6 +29,11 @@ function inserirResultado(req, res) {
     }
 }
 
+function capturarId(req, res) {
+
+  var resultado = 
+}
+
 function exibirResultado(req, res) {
 
   const limite_linhas = 7;

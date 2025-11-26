@@ -405,6 +405,7 @@
 
         var qtdAcertos = pontuacaoFinal;
         var fkUsuario = sessionStorage.ID_USUARIO;
+        var idResultadoVar = sessionStorage.ID_RESULTADO;
         console.log(qtdAcertos);
 
          // Enviando o valor da nova input
@@ -417,7 +418,8 @@
                 // crie um atributo que recebe o valor recuperado aqui
                 // Agora vá para o arquivo routes/usuario.js
                 acertosServer: qtdAcertos,
-                idUsuario: fkUsuario
+                idUsuario: fkUsuario,
+                idResultado: idResultadoVar
             }),
             })
             .then(function (resposta) {

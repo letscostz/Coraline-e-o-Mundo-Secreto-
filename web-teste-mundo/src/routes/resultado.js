@@ -9,6 +9,10 @@ router.post("/inserirResultado", function (req, res) {
     resultadoController.inserirResultado(req, res);
 }) // inserir dados do quiz no banco de dados
 
+router.get("/capturarId", function (req, res) {
+    resultadoController.capturarId(req, res);
+}) 
+
 router.get("/exibirResultado", function (req, res) {
     resultadoController.exibirResultado(req, res);
 });

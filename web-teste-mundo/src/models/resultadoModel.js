@@ -12,6 +12,19 @@ function inserirResultado(idUsuario, qtdAcertos) { // variavel definição
     return database.executar(instrucaoSql);
 }
 
+function capturarId() {
+
+    console.log("ENTREI NO CAPTURAR ID");
+
+    var instrucaoSql = `
+        SELECT idResultado FROM resultado WHERE fkUsuario = ${idUsuario} ORDER BY idResultado DESC LIMIT 1; 
+    `;
+
+    console.log("Executando a instrução SQL: \n" + instrucaoSql);
+    return database.executar(instrucaoSql);
+
+}
+
 function exibirResultado(idUsuario, limite_linhas) {
 
   var instrucaoSql = `SELECT * FROM resultado WHERE fkUsuario = ${idUsuario} ORDER BY idResultado DESC LIMIT ${limite_linhas}`;
@@ -22,5 +35,6 @@ function exibirResultado(idUsuario, limite_linhas) {
 
 module.exports = {
     inserirResultado,
-    exibirResultado
+    exibirResultado,
+    capturarId
 };

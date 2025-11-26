@@ -159,3 +159,6 @@ WHERE fkUsuario = 1
 ORDER BY idResultado DESC LIMIT 1;
 INSERT INTO resultado VALUES
 (4, 1, 1, 5);
+SELECT * FROM resultado WHERE fkUsuario = 1 ORDER BY idResultado DESC LIMIT 5;
+
+SELECT idResult
