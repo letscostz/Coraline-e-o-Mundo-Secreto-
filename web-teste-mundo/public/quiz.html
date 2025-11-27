@@ -405,7 +405,6 @@
 
         var qtdAcertos = pontuacaoFinal;
         var fkUsuario = sessionStorage.ID_USUARIO;
-        var idResultadoVar = sessionStorage.ID_RESULTADO;
         console.log(qtdAcertos);
 
         // Enviando o valor da nova input
@@ -415,8 +414,6 @@
                 "Content-Type": "application/json",
             },
             body: JSON.stringify({
-                // crie um atributo que recebe o valor recuperado aqui
-                // Agora vá para o arquivo routes/usuario.js
                 acertosServer: qtdAcertos,
                 idUsuario: fkUsuario
             }),
@@ -427,38 +424,6 @@
                 if (resposta.ok) {
                     console.log("Tudo ok!");
          
-                } else {
-                    throw "Houve um erro ao tentar realizar o cadastro!";
-                }
-            })
-            .catch(function (resposta) {
-                console.log(`#ERRO: ${resposta}`);
-                //finalizarAguardar();
-            });
-
-
-        fetch("/resultados/capturarId", {
-            method: "GET",
-            headers: {
-                "Content-Type": "application/json",
-            },
-            body: JSON.stringify({
-                idResultado: idResultadoVar
-
-            }),
-        })
-            .then(function (resposta) {
-                console.log("resposta: ", resposta);
-
-                if (resposta.ok) {
-                    console.log("Tudo ok!");
-                    
-                    resposta.json().then(json => {
-                    console.log(json);
-                    console.log(JSON.stringify(json));
-                    sessionStorage.ID_RESULTADO = idResultado;
-                });
-
                 } else {
                     throw "Houve um erro ao tentar realizar o cadastro!";
                 }

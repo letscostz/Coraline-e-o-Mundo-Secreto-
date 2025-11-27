@@ -29,32 +29,32 @@ function inserirResultado(req, res) {
     }
 }
 
-function capturarId(req, res) {
+// function capturarId(req, res) {
 
-  var resultado = req.body.idResultado;
-  console.log(resultado);
+//   var resultado = req.body.idResultado;
+//   console.log(resultado);
 
-  if (resultado == undefined) {
-        res.status(400).send("resultado está undefined!");
-    } else {
+//   if (resultado == undefined) {
+//         res.status(400).send("resultado está undefined!");
+//     } else {
 
-        resultadoModel.capturarId()
-            .then(
-                function (resultado) {
-                    res.json(resultado);
-                }
-            ).catch(
-                function (erro) {
-                    console.log(erro);
-                    console.log(
-                        "\nHouve um erro ao Capturar Id! Erro: ",
-                        erro.sqlMessage
-                    );
-                    res.status(500).json(erro.sqlMessage);
-                }
-            );
-    }
-}
+//         resultadoModel.capturarId()
+//             .then(
+//                 function (resultado) {
+//                     res.json(resultado);
+//                 }
+//             ).catch(
+//                 function (erro) {
+//                     console.log(erro);
+//                     console.log(
+//                         "\nHouve um erro ao Capturar Id! Erro: ",
+//                         erro.sqlMessage
+//                     );
+//                     res.status(500).json(erro.sqlMessage);
+//                 }
+//             );
+//     }
+// }
 
 function exibirResultado(req, res) {
 
@@ -80,6 +80,5 @@ function exibirResultado(req, res) {
 
 module.exports = {
     inserirResultado,
-    exibirResultado,
-    capturarId
+    exibirResultado
 }
