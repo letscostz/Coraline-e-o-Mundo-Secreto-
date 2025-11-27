@@ -94,8 +94,10 @@ body {
 }
 
 .bloco1 .coraline {
-    margin-top: 107px;
-    height: 900px;
+    margin-top: 8%;
+    margin-right: 30%;
+    height: 100%;
+    width: 70%;
 }
 
 .bloco1 .estrela1 {
@@ -225,8 +227,9 @@ body {
 .bloco4 {
     background-color: #fab4df;
     object-fit: cover;
-/*     background-image: url(assets/img/fundo\ rosa.jpg); */
+    background-image: url(../assets/img/fundo\ rosa\ desbotado.jpeg);
     height: 100vh;
+    width: 100%;
     position: relative;
     display: flex;
     text-align: end;
@@ -259,6 +262,13 @@ body {
     height: 500px;
     bottom: 0%;
     position: absolute;
+}
+
+.bloco4 .amuleto_verde {
+    height: 200px;
+    position: absolute;
+    top: 15%;
+    left: 5%;
 }
 
 .bloco5 {
@@ -403,9 +413,15 @@ p {
  }
 
  .login video {
-    width: 100%;
+    width: 50%;
     object-fit: cover;
+    display: flex;
+    height: 100vh;
+    position: absolute;
+    margin-right: 50%;
+    float: left;
  }
+ 
  .container-login {
     width: 100%;
     display: flex;
@@ -414,17 +430,21 @@ p {
     padding: 10px 200px;
     text-align: center;
     align-items: center;
-    background-color: white;
+    /* background-color: #370654; */
+    background-image: linear-gradient(to left, #380457,  #5b068b, #762ba1, transparent 85%);
+    z-index: 2;
+    position: absolute;
+    height: 100vh;
  }
 
  .titulo-login {
     font-size: 30px;
-    color: #370654;
+    color: rgb(255, 255, 154);
  }
 
  .campo {
     height: 100px;
-    width: 70%;
+    width: 50%;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
@@ -433,7 +453,7 @@ p {
 
  .campo span {
     font-size: 20px;
-    color: #370654;
+    color: rgb(255, 255, 154);
  }
  
  .campo input {
@@ -442,16 +462,18 @@ p {
     width: 100%;
     border-radius: 10px;
     border-style: none;
-    border: 2px solid #370654;
+    border: 2px solid #FFFEFE;
  }
 
  .login button {
-    background-color: #370654;
+    background-color: rgb(255, 255, 154);
     height: 40px;
-    width: 25%;
+    width: 20%;
     border-radius: 10px;
-    color: white;
+    color: #370654;
     font-size: 20px;
+    border-style: none;
+    border: 2px solid black;
  }
 
  .mensagem {
@@ -507,7 +529,7 @@ p {
     position: absolute;
     height: 7%;
     width: 7%;
-    bottom: 0%;
+    bottom: 2%;
     left: 50%;
 }
 
@@ -517,7 +539,7 @@ p {
     height: 7%;
     width: 7%;
     bottom: 10%;
-    right: 0%;
+    right: 2%;
     transform: rotate(20deg);
 }
 
