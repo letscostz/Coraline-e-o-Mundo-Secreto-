@@ -87,21 +87,23 @@
     window.onload = exibirQuiz;
     var usuarios = Number();
 
+
     function exibirQuiz() {
-    console.log("ENTREI NO EXIBIR QUIZ");
     usuarios = JSON.parse(sessionStorage.ID_USUARIO);
+
+
         // usuarios.forEach(item => {
             // document.getElementById("btnAquario").innerHTML += `
             // <button class="btn-chart" onclick="exibirAquario(${item.id})" id="btnAquario${item.id}">${item.descricao}</button> `
             
 
             document.getElementById("graficos").innerHTML += `
-                <div id="grafico${usuarios}" class="display-none">
+                <div id="grafico${usuarios}">
                     <h3 class="tituloGraficos">
                         <span id="tituloAquario${usuarios}"></span>
                     </h3>
                     <div class="graph">
-                        <canvas id="myChartCanvas${usuarios}"></canvas>
+                        <canvas id="myChartCanvas"></canvas>
                     </div>
                     <div class="label-captura">
                         <p id="avisoCaptura${usuarios}" style="color: white"></p>
@@ -133,7 +135,7 @@
                 if (elementoAtual.classList.contains("display-block")) {
                     elementoAtual.classList.remove("display-block")
                 }
-                elementoAtual.classList.add("display-none")
+                // elementoAtual.classList.add("display-none")
 
                 // alterando estilo do botão
                 let btnAtual = document.getElementById(`btnCoraline${todosOsGraficos[i].idUsuario}`)
@@ -146,7 +148,7 @@
 
         // exibindo - ou não - o gráfico
         let graficoExibir = document.getElementById(`grafico${idUsuario}`)
-        graficoExibir.classList.remove("display-none")
+        // graficoExibir.classList.remove("display-none")
         graficoExibir.classList.add("display-block")
 
         // alterando estilo do botão
@@ -168,27 +170,19 @@
     //     Para ajustar o "select", ajuste o comando sql em src/models
     function obterDadosGrafico(idUsuario) {
 
+
         // alterarTitulo(idUsuario)
 
         // if (proximaAtualizacao != undefined) {
         //     clearTimeout(proximaAtualizacao);
         // }
 
-        fetch(`/resultados/exibirResultado`, {
-        
-         method: "POST",
-            headers: {
-                "Content-Type": "application/json"
-            },
-            body: JSON.stringify({
-                idUsuario: usuarios
-            })
-        
+        fetch(`/resultados/exibirResultado/${idUsuario}`, {
         }).then(function (response) {
             if (response.ok) {
                 response.json().then(function (resposta) {
-                    console.log(`Dados recebidos: ${JSON.stringify(resposta)}`);
                     resposta.reverse();
+                    console.log(`Dados recebidos: ${JSON.stringify(resposta)}`)
 
                     plotarGrafico(resposta, idUsuario);
 
@@ -208,6 +202,7 @@
     function plotarGrafico(resposta, idUsuario) {
 
         console.log('iniciando plotagem do gráfico...');
+
 
         // Criando estrutura para plotar gráfico - labels
         let labels = [];
@@ -231,27 +226,31 @@
         // Inserindo valores recebidos em estrutura para plotar o gráfico
         for (i = 0; i < resposta.length; i++) {
             var registro = resposta[i];
-            labels.push(registro.idResultado);
+            console.log('reg', registro);
+            labels.push(registro.fkUsuario);
             dados.datasets[0].data.push(registro.qtdAcertos);
         }
+
+        
+        
 
         console.log('----------------------------------------------')
         console.log('O gráfico será plotado com os respectivos valores:')
         console.log('Labels:')
         console.log(labels)
         console.log('Dados:')
-        console.log(dados.datasets)
+        console.log(dados)
         console.log('----------------------------------------------')
 
         // Criando estrutura para plotar gráfico - config
         const config = {
-            type: 'line',
+            type: 'bar',
             data: dados,
         };
 
-        // Adicionando gráfico criado em div na tela
+        // Adicionando gráfico criado em div  na tela
         let myChart = new Chart(
-            document.getElementById(`myChartCanvas${idUsuario}`),
+            document.getElementById(`myChartCanvas`),
             config
         );
 

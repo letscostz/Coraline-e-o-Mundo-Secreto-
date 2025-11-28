@@ -269,7 +269,9 @@ body {
 }
 
 .graph {
-  width: 70%;
+
+  height: 500px;
+  width: 500px;
   margin: auto;
   padding-top: 10px;
 }

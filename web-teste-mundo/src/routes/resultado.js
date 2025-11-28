@@ -9,7 +9,7 @@ router.post("/inserirResultado", function (req, res) {
     resultadoController.inserirResultado(req, res);
 }) // inserir dados do quiz no banco de dados
 
-router.post("/exibirResultado", function (req, res) {
+router.get("/exibirResultado/:idUsuario", function (req, res) {
     resultadoController.exibirResultado(req, res);
 });
 
