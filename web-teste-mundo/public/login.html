@@ -96,7 +96,8 @@
                     sessionStorage.EMAIL_USUARIO = json.email;
                     sessionStorage.NOME_USUARIO = json.nome;
                     sessionStorage.ID_USUARIO = json.idUsuario;
-                    //sessionStorage.AQUARIOS = JSON.stringify(json.aquarios)
+
+                    console.log("ID salvo:", sessionStorage.ID_USUARIO);
 
                     setTimeout(function () {
                         window.location = "quiz.html";
@@ -120,9 +121,5 @@
 
         return false;
     }
-
- /*    function sumirMensagem() {
-        cardErro.style.display = "none"
-    } */
 
 </script>
