@@ -29,38 +29,11 @@ function inserirResultado(req, res) {
     }
 }
 
-// function capturarId(req, res) {
-
-//   var resultado = req.body.idResultado;
-//   console.log(resultado);
-
-//   if (resultado == undefined) {
-//         res.status(400).send("resultado está undefined!");
-//     } else {
-
-//         resultadoModel.capturarId()
-//             .then(
-//                 function (resultado) {
-//                     res.json(resultado);
-//                 }
-//             ).catch(
-//                 function (erro) {
-//                     console.log(erro);
-//                     console.log(
-//                         "\nHouve um erro ao Capturar Id! Erro: ",
-//                         erro.sqlMessage
-//                     );
-//                     res.status(500).json(erro.sqlMessage);
-//                 }
-//             );
-//     }
-// }
-
 function exibirResultado(req, res) {
 
   const limite_linhas = 7;
 
-  var idUsuario = req.params.idUsuario; // body ou params
+  var idUsuario = req.params.idUsuario; 
 
   console.log(`Recuperando as ultimas ${limite_linhas} medidas`);
 

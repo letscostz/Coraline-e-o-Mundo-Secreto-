@@ -430,11 +430,14 @@ p {
     padding: 10px 200px;
     text-align: center;
     align-items: center;
-    /* background-color: #370654; */
-    background-image: linear-gradient(to left, #380457,  #5b068b, #762ba1, transparent 85%);
+    background-image: linear-gradient(to left, #49096e,  #5a289c, #5544a0, transparent 80%);
     z-index: 2;
     position: absolute;
     height: 100vh;
+ }
+
+ .caixa {
+    margin-left: 60%;
  }
 
  .titulo-login {
@@ -444,7 +447,7 @@ p {
 
  .campo {
     height: 100px;
-    width: 50%;
+    width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
@@ -468,12 +471,14 @@ p {
  .login button {
     background-color: rgb(255, 255, 154);
     height: 40px;
-    width: 20%;
+    width: 30%;
     border-radius: 10px;
     color: #370654;
     font-size: 20px;
     border-style: none;
     border: 2px solid black;
+    margin-top: 30px;
+    margin-bottom: 20px;
  }
 
  .mensagem {
@@ -484,11 +489,11 @@ p {
   justify-content: center;
   padding: 20px;
   height: 20px;
-  color: #b49001;
+  color: #ebbc02;
 }
 
 .mensagem a {
-  color: #b49001;
+  color:  #ebbc02;
   outline: none;
   text-decoration: none;
   font-weight: bolder;
