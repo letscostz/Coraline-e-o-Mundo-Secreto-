@@ -301,4 +301,81 @@ button {
     height: 80vh;
 }
 
+/* Aqui começa a galeria.html */
+
+.pagina-galeria {
+    background-color: #f15c33;
+    height: 250vh;
+}
+
+.galeria {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.galeria-titulo {
+    color: rgb(109, 0, 0);
+}
+
+.caixa-1 {
+    height: 50vh;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-end;
+    margin-top: 5%;
+}
+
+.caixa-1 img {
+    width: 35%;
+    height: 80%;
+    border-radius: 25px;
+}
+
+.caixa-2 {
+    height: 50vh;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-end;
+    margin-top: 5%;
+}
+
+.caixa-2 img {
+    width: 35%;
+    height: 80%;
+    border-radius: 25px;
+}
+
+.caixa-3 {
+    height: 50vh;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-end;
+    margin-top: 5%;
+}
+
+.caixa-3 img {
+    width: 35%;
+    height: 80%;
+    border-radius: 25px;
+}
+
+.caixa-4 {
+    height: 50vh;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-end;
+    margin-top: 5%;
+}
+
+.caixa-4 img {
+    width: 35%;
+    height: 80%;
+    border-radius: 25px;
+}
+
 /* Aqui começa o footer */
