@@ -1,6 +1,10 @@
 /* Não usar pure white or pure black: https://uxplanet.org/basicdesign-never-use-pure-black-in-typography-36138a3327a6 */
 /* The 4-point grid system: https://medium.com/@sainzkike/controlling-spacing-in-design-systems-multiple-spacing-9bf1afec87f */
 
+* {
+    margin: 0%;
+}
+
 /* Define variáveis CSS globais no elemento raiz */
 
 /* Aqui começa o quiz.html */
@@ -218,6 +222,7 @@ button {
 
 .welcome img {
     width: 200px;
+    margin-top: 50px;
 }
 
 .welcome .bem-vindo {

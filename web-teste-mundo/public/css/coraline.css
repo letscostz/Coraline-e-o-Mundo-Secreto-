@@ -3,10 +3,7 @@
 * {
     box-sizing: border-box;
     scroll-behavior: smooth;
-}
-
-body {
-    margin: 0;
+    margin: 0%;
 }
 
 .header {
@@ -50,7 +47,6 @@ body {
     justify-content: space-between;
     align-items: center;
     font-weight: bolder;
-    background-color: #8f2399;
 }
 
 .navbar a {   

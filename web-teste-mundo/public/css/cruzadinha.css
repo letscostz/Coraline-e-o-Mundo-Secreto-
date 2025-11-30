@@ -1,0 +1,92 @@
+* {
+    margin: 0%;
+}
+
+.pagina-cruzadinha {
+    background-image: url(../assets/img/papel\ azul.jpg);
+    display: flex;
+    background-color: aliceblue;
+    object-fit: cover;
+}
+
+input {
+    width: 30px;
+    height: 30px;
+    display: flex;
+    text-align: center;
+}
+
+td .vazio {
+    opacity: 0;
+}
+
+span {
+    display: flex;
+    justify-content: center;
+}
+
+.dicas {
+    background-color: #265480;
+    width: 50%;
+    height: 100vh;
+}
+
+h2 {
+    display: flex;
+    justify-content: center;
+    margin-top: 30%;
+    color: aliceblue;
+}
+
+h4 {
+    color: aliceblue;
+}
+
+p {
+    color: aliceblue;
+}
+
+.dicas div {
+    margin-top: 10%;
+    padding: 10%;
+    font-size: 20px;
+    height: 15%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.cruzadinha {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.outro-wybie {
+    width: 15%;
+    z-index: 2;
+    position: absolute;
+    bottom: 0%;
+    right: 0%;
+}
+
+/* .estrelas1 {
+    width: 7%;
+    transform: rotate(90deg);
+    top: -5%;
+    z-index: 2;
+    position: absolute;
+} */
+
+
+/* .estrelas2 {
+    z-index: 2;
+    position: absolute;
+    left: 0%;
+    transform: rotate(90deg);
+    top: -90%;
+    margin-left: -5%;
+    background-color: aqua;
+    width: 10vw;
+} */
