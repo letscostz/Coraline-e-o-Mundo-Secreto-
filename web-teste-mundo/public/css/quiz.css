@@ -231,3 +231,30 @@ button {
     position: absolute;
     width: 50px;
 }
+
+/* Aqui começa a dashboard.html */
+
+.pagina-dashboard {
+    background-color: #198754;
+    display: flex;
+    justify-content: space-around;
+}
+
+.grafico {
+    width: 50vw;
+    height: 50vh;
+    display: flex;
+    align-items: flex-end;
+    margin-top: 25%;
+}
+
+.graph {
+    width: 100%;
+}
+
+.hello {
+ /*    background-color: #9dd3ba; */
+    height: 30vh;
+    width: 25vw;
+    margin-top: 10%;
+}
