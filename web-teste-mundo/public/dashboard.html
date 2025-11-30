@@ -8,10 +8,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mundo Secreto | Dashboard</title>
 
-    
-    <!-- <link rel="stylesheet" href="./css/dashboards.css"> -->
-    <link rel="stylesheet" href="css/quiz.css">
-   <!--  <link rel="stylesheet" href="./css/estilo.css" />  -->
+    <link rel="stylesheet" href="css/outroMundo.css">
+    <link rel="icon" href="assets/icon/botão.png">
+ 
     <script src="../js/sessao.js"></script>
     <script src="./../js/alerta.js"></script>
 
@@ -37,11 +36,11 @@
             </div>
 
             <ul class="navbar">
-                
+
                 <li class="campo">
                     <a href="welcome.html">WELCOME!</a>
                 </li>
-
+                
                 <li class="campo">
                     <a href="quiz.html">QUIZ</a>
                 </li>
@@ -49,20 +48,15 @@
                 <li class="campo">
                     <a href="dashboard.html">DASHBOARD</a>
                 </li>
-
-                <!-- 
+                 
+                <li class="campo">
+                    <a href="cruzadinha.html">CRUZADINHA</a>
+                </li>
             
-            <li class="campo">
-                <a href="#bloco5">CARROSSEL</a>
-            </li>
+                <li class="campo">
+                    <a href="galeria.html">GALERIA</a>
+                </li>
 
-            <li class="campo">
-                <a href="#sobre-mim">SOBRE MIM</a>
-            </li> -->
-
-                <!--   <li class="campo">
-                <a href="login.html">OUTRO MUNDO</a>
-            </li> -->
             </ul>
 
             <a href="index.html"><img class="chave" src="assets/img/chave.png"></a>
@@ -70,14 +64,20 @@
     </div>
 
     <div class="hello">
-        <h3>Olá, <span id="b_usuario">usuário</span>!</h3>
+        <h3>Olá, <span id="b_usuario">usuário</span>! <br>
+        Confira seu desempenho no quiz "O quanto você sabe sobre <i>Coraline e o Mundo Secreto</i>"</h3>
     </div>
 
-    <div class="grafico" id="graficos"></div>
+    <div class="dash"> 
+
+        <div class="KPI">
+            <h3>Porcentagem de Acertos</h3>
+        </div>
     
-    <!-- <div class="dash">
-        <div id="alerta">
-        </div>  -->
+        <div class="grafico" id="graficos"></div>
+
+    </div>
+    
 
 </body>
 
@@ -233,7 +233,7 @@
             }
         };
 
-        // Adicionando gráfico criado em div  na tela
+        // Adicionando gráfico criado em div na tela
         let myChart = new Chart(
             document.getElementById(`myChartCanvas`),
             config

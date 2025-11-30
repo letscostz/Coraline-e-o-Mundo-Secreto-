@@ -3,6 +3,8 @@
 
 /* Define variáveis CSS globais no elemento raiz */
 
+/* Aqui começa o quiz.html */
+
 :root {
     --primary-brand-color: #ED145B;
     --secondary-brand-color: #2576d3;
@@ -110,6 +112,8 @@ button {
     color: var(--new-gray);
 }
 
+/* Aqui começa o header */
+
 .header-outro-mundo {
     height: 100px;
     background-color: transparent;
@@ -148,7 +152,7 @@ button {
 .navbar { 
     display: flex;
     list-style: none;
-    width: 30%;
+    width: 60%;
     justify-content: space-between;
     align-items: center;
     font-weight: bolder;
@@ -170,7 +174,7 @@ button {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #5a289c;
+    background-color: #8148ca;
     height: 30px;
     width: 140px;
     border-radius: 10px;
@@ -253,8 +257,43 @@ button {
 }
 
 .hello {
- /*    background-color: #9dd3ba; */
-    height: 30vh;
-    width: 25vw;
+    background-color: #ffffff;
+    height: 20vh;
+    width: 20vw;
     margin-top: 10%;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    font-size: 20px;
+    border-radius: 20px;
+    padding: 10px;
+    box-shadow: 10px 10px 0px #00421e;
+    color: #198754;
 }
+
+.KPI {
+    background-color: #ffffff;
+    width: 20%;
+    height: 15%;
+    z-index: 2;
+    position: absolute;
+    top: 20%;
+    right: 20%;
+    border-radius: 25px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    box-shadow: 10px 10px 0px #00421e;
+    color: #198754;
+    font-size: 20px;
+}
+
+.dash {
+    margin-top: 8%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    height: 80vh;
+}
+
+/* Aqui começa o footer */

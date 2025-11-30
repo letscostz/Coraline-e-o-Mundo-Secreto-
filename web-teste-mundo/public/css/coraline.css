@@ -46,10 +46,11 @@ body {
 .navbar { 
     display: flex;
     list-style: none;
-    width: 70%;
+    width: 60%;
     justify-content: space-between;
     align-items: center;
     font-weight: bolder;
+    background-color: #8f2399;
 }
 
 .navbar a {   
@@ -295,26 +296,6 @@ p {
     margin: 0;
 }
 
-/* .carrossel {
-    box-shadow: 2px 2px 4px black;
-    overflow: hidden;
-    height: 500px;
-    width: 500px;
-    background-color: #59a2a8;
-}
-
-.carrossel .container {
-    display: flex;
-    transition: transform 0.5 ease-in-out;
-    transform: translateX(0);
-}
-
-.carrossel .container img{
-    object-fit: cover;
-    height: 500px;
-    width: 500px;
-} */
-
 .sobre-mim {
     background-color: #a3cbff;
     height: 100vh;
@@ -389,15 +370,6 @@ p {
     width: 50px;
     margin: 10px;
 }
-
-/* Cores Salvas
-#59a2a8; -- verde água
-#1b3e96; -- azul marinho
-#f576d5; -- rosa médio
- */
-
- /* Aqui acaba o index.html */
- /* ------------------------------------------------------------------------------------------------------------------------------------------- */
 
  /* Aqui começa o login.html */
 

@@ -4,10 +4,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Coraline - Quiz</title>
-    <link rel="stylesheet" href="css/quiz.css">
-</head>
+    <title>Mundo Secreto | Quiz</title>
 
+    <link rel="stylesheet" href="css/outroMundo.css">
+    <link rel="icon" href="assets/icon/botão.png">
+
+</head>
 
 <body onload="onloadEsconder()">
 
@@ -31,22 +33,15 @@
                 <li class="campo">
                     <a href="dashboard.html">DASHBOARD</a>
                 </li>
-                <!-- 
-            <li class="campo">
-                <a href="#bloco4">SINOPSE</a>
-            </li>
+                 
+                <li class="campo">
+                    <a href="cruzadinha.html">CRUZADINHA</a>
+                </li>
             
-            <li class="campo">
-                <a href="#bloco5">CARROSSEL</a>
-            </li>
+                <li class="campo">
+                    <a href="galeria.html">GALERIA</a>
+                </li>
 
-            <li class="campo">
-                <a href="#sobre-mim">SOBRE MIM</a>
-            </li> -->
-
-                <!--   <li class="campo">
-                <a href="login.html">OUTRO MUNDO</a>
-            </li> -->
             </ul>
 
             <a href="index.html"><img class="chave" src="assets/img/chave.png"></a>
@@ -311,9 +306,6 @@
 
         if (numeroDaQuestaoAtual <= quantidadeDeQuestoes - 1) {
             preencherHTMLcomQuestaoAtual(numeroDaQuestaoAtual)
-            /* } else if (numeroDaQuestaoAtual == quantidadeDeQuestoes - 1) {
-                alert("Atenção... a próxima é a ultima questão!")
-                preencherHTMLcomQuestaoAtual(numeroDaQuestaoAtual) */
         } else {
             finalizarJogo()
         }
