@@ -92,6 +92,7 @@
 
     function exibirQuiz() {
     usuarios = JSON.parse(sessionStorage.ID_USUARIO);
+    tentativas = sessionStorage.TENTATIVAS
             
             document.getElementById("graficos").innerHTML += `
                     <div class="graph">
@@ -99,11 +100,16 @@
                     </div>  
             `
 
+            document.getElementById("kpi-tentativas").innerHTML += `
+                    ${tentativas}
+            `
+
             obterDadosGrafico(usuarios)
 
         if (usuarios.length > 0) {
             exibirQuiz(usuarios)
         }
+        contarTentativas(usuarios)
     }
 
     function exibirGraficoResultado(idUsuario) {
@@ -239,6 +245,46 @@
             config
         );
 
+    }
+
+    
+    function contarTentativas(idUsuario) {
+
+        fetch(`/resultados/contarTentativas/${idUsuario}`, {
+        }).then(function (response) {
+
+             if (response.ok) {
+                response.json().then(function (resposta) {
+                    
+                    console.log(`Dados recebidos: ${JSON.stringify(resposta)} TESTE`)
+
+                    sessionStorage.TENTATIVAS =  JSON.stringify(resposta.tentativas);
+
+                });
+            } else {
+                console.error('Nenhum dado encontrado ou erro na API');
+            }
+            
+            
+        })
+            .catch(function (error) {
+                console.error(`Erro na obtenção dos dados p/ contar tentativas: ${error.message}`);
+            });
+
+    }
+    
+    function contarPorcentagem(idUsuario) {
+
+        fetch(`/resultados/contarPorcentagem/${idUsuario}`, {
+
+        }).then(function (response) {
+
+
+        })
+
+            .catch(function (error) {
+                console.error(`Erro na obtenção dos dados p/ contar porcentagem: ${error.message}`);
+            });
     }
     
 </script>

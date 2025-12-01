@@ -31,7 +31,7 @@ function inserirResultado(req, res) {
 
 function exibirResultado(req, res) {
 
-  const limite_linhas = 7;
+  const limite_linhas = 5;
   var idUsuario = req.params.idUsuario; 
 
   console.log(`Recuperando as ultimas ${limite_linhas} medidas`);
@@ -57,7 +57,7 @@ function contarTentativas(req, res) {
   var idUsuario = req.params.idUsuario;
 
     resultadoModel.contarTentativas(idUsuario)
-        then(function (resultado) {
+        .then(function (resultado) {
             if (resultado.length > 0) {
                 res.status(200).json(resultado[0]); 
             } else {
@@ -74,7 +74,7 @@ function contarPorcentagem(req, res) {
 
   console.log("ACESSEI O CONTAR PORCENTAGEM");
   var idUsuario = req.params.idUsuario;
-  const limite_linhas = 7;
+  const limite_linhas = 5;
 
     resultadoModel.contarPorcentagem(idUsuario, limite_linhas)
         then(function (resultado) {

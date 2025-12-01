@@ -25,12 +25,12 @@ function contarTentativas(idUsuario) {
 
     console.log("ACESSEI O CONTAR TENTATIVAS");
 
-    var instrucaoSql = `
-        SELECT COUNT(idResultado) FROM resultado WHERE fkUsuario = ${idUsuario};
+    var contarTentativas = `
+        SELECT COUNT(idResultado) as tentativas FROM resultado WHERE fkUsuario = ${idUsuario};
     `;
 
-    console.log("Executando a instrução SQL: \n" + instrucaoSql);
-    return database.executar(instrucaoSql);
+    console.log("Executando a instrução SQL: \n" + contarTentativas);
+    return database.executar(contarTentativas);
 
 }
 
@@ -38,12 +38,12 @@ function contarPorcentagem(idUsuario, limite_linhas) {
 
     console.log("ACESSEI O CONTAR PORCENTAGEM");
 
-    var instrucaoSql = `
-        SELECT ROUND(AVG(qtdAcertos) * 100 / 10, 2) FROM (SELECT qtdAcertos FROM resultado WHERE fkUsuario = ${idUsuario} ORDER BY idResultado DESC LIMIT ${limite_linhas}) as ultimos7; 
+    var contarPorcentagem = `
+        SELECT ROUND(AVG(qtdAcertos) * 100 / 10, 2) as porcentagem FROM (SELECT qtdAcertos FROM resultado WHERE fkUsuario = ${idUsuario} ORDER BY idResultado DESC LIMIT ${limite_linhas}) as ultimos5; 
     `;
 
-    console.log("Executando a instrução SQL: \n" + instrucaoSql);
-    return database.executar(instrucaoSql);
+    console.log("Executando a instrução SQL: \n" + contarPorcentagem);
+    return database.executar(contarPorcentagem);
 
 }
 
