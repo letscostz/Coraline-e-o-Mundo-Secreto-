@@ -11,6 +11,14 @@ router.post("/inserirResultado", function (req, res) {
 
 router.get("/exibirResultado/:idUsuario", function (req, res) {
     resultadoController.exibirResultado(req, res);
-});
+}); // exibir os resultados na dashboard
+
+router.get("/contarTentativas/:idUsuario", function (req, res) {
+    resultadoController.contarTentativas(req, res);
+}); // contar a quantidade de tentativas do usuario
+
+router.get("/contarPorcentagem/:idUsuario", function (req, res) {
+    resultadoController.contarPorcentagem(req, res);
+}); // contar a porcentagem de acertos nas ultimas tentativas
 
 module.exports = router;
