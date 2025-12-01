@@ -51,7 +51,7 @@ function exibirResultado(req, res) {
     });
 }
 
-function contarTentativas(req, res) {
+function contarTentativas(req, res) { 
 
   console.log("ACESSEI O CONTAR TENTATIVAS");
   var idUsuario = req.params.idUsuario;
@@ -89,7 +89,6 @@ function contarPorcentagem(req, res) {
     });
 
 }
-
 
 module.exports = {
     inserirResultado,

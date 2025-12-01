@@ -68,16 +68,16 @@
         Confira seu desempenho no quiz "O quanto você sabe sobre <i>Coraline e o Mundo Secreto</i>"</h3>
     </div>
 
-    <div class="dash"> 
+    <div class="dash">
 
         <div class="KPI">
-            <h3>Porcentagem de Acertos</h3>
+            <div class="tentativas" id="kpi-tentativas"></div>
+            <div class="porcentagem" id="kpi-porcentagem">%</div>
         </div>
     
         <div class="grafico" id="graficos"></div>
 
     </div>
-    
 
 </body>
 
@@ -142,7 +142,7 @@
         }).then(function (response) {
             if (response.ok) {
                 response.json().then(function (resposta) {
-                    resposta.reverse();
+                    resposta.reverse(); // para trazer os dados do banco de mais recente para o mais antigo
                     console.log(`Dados recebidos: ${JSON.stringify(resposta)}`)
 
                     plotarGrafico(resposta, idUsuario);
@@ -240,5 +240,5 @@
         );
 
     }
-
+    
 </script>

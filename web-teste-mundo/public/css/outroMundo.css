@@ -277,11 +277,35 @@ button {
 }
 
 .KPI {
-    background-color: #ffffff;
-    width: 20%;
-    height: 15%;
+    width: 50vw;
+    height: 30vh;
     z-index: 2;
     position: absolute;
+    margin-top: -30%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+} 
+
+.tentativas {
+    background-color: #ffffff;
+    width: 30%;
+    height: 50%;
+    top: 20%;
+    right: 20%;
+    border-radius: 25px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    box-shadow: 10px 10px 0px #00421e;
+    color: #198754;
+    font-size: 20px;
+}
+
+.porcentagem {
+    background-color: #ffffff;
+    width: 30%;
+    height: 50%;
     top: 20%;
     right: 20%;
     border-radius: 25px;
@@ -299,6 +323,7 @@ button {
     justify-content: center;
     flex-direction: column;
     height: 80vh;
+    width: 50vw;
 }
 
 /* Aqui começa a galeria.html */
