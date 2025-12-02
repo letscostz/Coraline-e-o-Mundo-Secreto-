@@ -79,6 +79,12 @@
 
     </div>
 
+    <img class="agulha" src="assets/img/agulha.png">
+    <img class="chave-libelula" src="assets/img/chave libelula.png">
+    <!-- <img class="espiral" src="assets/img/aspiral verde.png"> -->
+    <img class="botao-verde" src="assets/img/botao verde.png">
+    <img class="estrela-verde" src="assets/img/estrela verde.png">
+
 </body>
 
 </html>
@@ -101,10 +107,12 @@
             `
 
             document.getElementById("kpi-tentativas").innerHTML += `
-            ${tentativas}
+            Quantidade de Tentativas <br>
+            <h2>${tentativas}</h2>
             `
             document.getElementById("kpi-porcentagem").innerHTML += `
-            ${porcentagem}
+            Porcentagem de Acertos nas Últimas 5 Tentativas <br>
+            <h2> ${porcentagem} % </h2>
             `    
 
             obterDadosGrafico(usuarios)
@@ -184,8 +192,8 @@
             datasets: [{
                 label: 'Quantidade de Acertos',
                 data: [], 
-                backgroundColor: 'rgb(0, 100, 0)',
-                borderColor: 'rgb(0, 75, 0)',
+                backgroundColor: '#12643e',
+                borderColor: '#12643e',
                 borderWidth: 2
             }]
         };
