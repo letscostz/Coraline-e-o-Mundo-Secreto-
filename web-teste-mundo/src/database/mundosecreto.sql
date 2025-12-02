@@ -162,4 +162,4 @@ INSERT INTO resultado VALUES
 SELECT * FROM resultado WHERE fkUsuario = 1 ORDER BY idResultado DESC LIMIT 5;
 
 SELECT COUNT(idResultado) FROM resultado WHERE fkUsuario = 1; -- Quantidade de tentativas do usuário
-SELECT ROUND(AVG(qtdAcertos) * 100 / 10, 2) FROM resultado WHERE fkUsuario = 1 ORDER BY idResultado DESC LIMIT 5; -- Porcentagem de acertos do usuário nas últimas 7 tentativas 
+SELECT ROUND(AVG(qtdAcertos) * 100 / 10, 2) FROM (SELECT qtdAcertos FROM resultado WHERE fkUsuario = 1 ORDER BY idResultado DESC LIMIT 5) as ultimos5; -- Porcentagem de acertos do usuário nas últimas 7 tentativas 

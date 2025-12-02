@@ -72,7 +72,7 @@
 
         <div class="KPI">
             <div class="tentativas" id="kpi-tentativas"></div>
-            <div class="porcentagem" id="kpi-porcentagem">%</div>
+            <div class="porcentagem" id="kpi-porcentagem"></div>
         </div>
     
         <div class="grafico" id="graficos"></div>
@@ -89,10 +89,10 @@
     window.onload = exibirQuiz;
     var usuarios = Number();
 
-
     function exibirQuiz() {
     usuarios = JSON.parse(sessionStorage.ID_USUARIO);
-    tentativas = sessionStorage.TENTATIVAS
+    tentativas = sessionStorage.TENTATIVAS;
+    porcentagem = sessionStorage.PORCENTAGEM;
             
             document.getElementById("graficos").innerHTML += `
                     <div class="graph">
@@ -101,15 +101,20 @@
             `
 
             document.getElementById("kpi-tentativas").innerHTML += `
-                    ${tentativas}
+            ${tentativas}
             `
+            document.getElementById("kpi-porcentagem").innerHTML += `
+            ${porcentagem}
+            `    
 
             obterDadosGrafico(usuarios)
 
         if (usuarios.length > 0) {
             exibirQuiz(usuarios)
         }
+    
         contarTentativas(usuarios)
+        contarPorcentagem(usuarios)
     }
 
     function exibirGraficoResultado(idUsuario) {
@@ -164,8 +169,8 @@
     }
 
     // Esta função *plotarGrafico* usa os dados capturados na função anterior para criar o gráfico
-    // Configura o gráfico (cores, tipo, etc), materializa-o na página e, 
-    // A função *plotarGrafico* também invoca a função *atualizarGrafico*
+    // Configura o gráfico (cores, tipo, etc), materializa-o na página 
+
     function plotarGrafico(resposta, idUsuario) {
 
         console.log('iniciando plotagem do gráfico...');
@@ -210,8 +215,18 @@
             type: 'bar',
             data: dados,
             options: {
+
+                layout: {
+                    padding: {
+                    top: 30, // Aumenta o espaço acima do gráfico
+                    } 
+                },
+
+                responsive: true,
+                maintainAspectRatio: false, // Isso permite controlar a altura via CSS
+                
                 scales: {
-                    y: { 
+                    y: {
                         grid: {
                             color: 'rgba(0, 75, 0, 0.3)',  // Cor das linhas de grade do eixo Y
                         },
@@ -219,7 +234,7 @@
                             color: 'rgb(0, 75, 0)' // Cor do texto (rótulos) no eixo Y
                         }
                     },
-                    x: { 
+                    x: {
                         grid: {
                             display: false
                         },
@@ -258,13 +273,12 @@
                     
                     console.log(`Dados recebidos: ${JSON.stringify(resposta)} TESTE`)
 
-                    sessionStorage.TENTATIVAS =  JSON.stringify(resposta.tentativas);
+                    sessionStorage.TENTATIVAS = JSON.stringify(resposta.tentativas);
 
                 });
             } else {
                 console.error('Nenhum dado encontrado ou erro na API');
-            }
-            
+            }  
             
         })
             .catch(function (error) {
@@ -279,9 +293,19 @@
 
         }).then(function (response) {
 
+            if (response.ok) {
+                response.json().then(function (resposta) {
+                    
+                    console.log(`Dados recebidos: ${JSON.stringify(resposta)} TESTE`)
+
+                    sessionStorage.PORCENTAGEM = Number(resposta.porcentagem); // salvar o valor como número 
+
+                });
+            } else {
+                console.error('Nenhum dado encontrado ou erro na API');
+            }
 
         })
-
             .catch(function (error) {
                 console.error(`Erro na obtenção dos dados p/ contar porcentagem: ${error.message}`);
             });

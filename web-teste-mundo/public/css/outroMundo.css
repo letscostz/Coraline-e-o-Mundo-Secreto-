@@ -300,6 +300,7 @@ button {
     box-shadow: 10px 10px 0px #00421e;
     color: #198754;
     font-size: 20px;
+    text-align: center;
 }
 
 .porcentagem {
@@ -324,6 +325,13 @@ button {
     flex-direction: column;
     height: 80vh;
     width: 50vw;
+}
+
+.graph {
+    position: relative; 
+    height:500px; 
+    width:700px;
+    margin-left: 15%;
 }
 
 /* Aqui começa a galeria.html */

@@ -77,7 +77,7 @@ function contarPorcentagem(req, res) {
   const limite_linhas = 5;
 
     resultadoModel.contarPorcentagem(idUsuario, limite_linhas)
-        then(function (resultado) {
+        .then(function (resultado) {
             if (resultado.length > 0) {
                 res.status(200).json(resultado[0]); 
             } else {
