@@ -289,7 +289,7 @@ button {
 .pagina-dashboard {
     background-color: #25a368;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-evenly;
     align-items: center;
 }
 
@@ -309,7 +309,8 @@ button {
     background-color: #ffffff;
     height: 20vh;
     width: 20vw;
-    margin-top: 10%;
+    margin-top: 5%;
+    margin-left: 10%;
     display: flex;
     align-items: center;
     text-align: center;
@@ -386,17 +387,26 @@ button {
     width: 10%;
     z-index: 2;
     position: absolute;
-    top: 10%;
+    bottom: 0%;
     left: 0%;
 }
 
-.chave-libelula {
+.chave-libelula1 {
     width: 5%;
     z-index: 2;
     position: absolute;
     top: 30%;
-    left: 25%;
+    left: 45%;
     transform: rotate(-35deg);
+}
+
+.chave-libelula2 {
+    width: 5%;
+    z-index: 2;
+    position: absolute;
+    bottom: 10%;
+    left: 25%;
+    transform: rotate(65deg);
 }
 
 .espiral {
@@ -412,16 +422,58 @@ button {
     z-index: 2;
     position: absolute;
     bottom: 3%;
-    left: 25%;
+    left: 5%;
 }
 
-.estrela-verde {
-    width: 7%;
+.estrela-verde1 {
+    width: 5%;
+    z-index: 2;
+    position: absolute;
+    top: 10%;
+    left: 2%;
+}
+
+.estrela-verde2 {
+    width: 5%;
+    z-index: 2;
+    position: absolute;
+    top: 15%;
+    left: 5%;
+}
+
+.estrela-verde3 {
+    width: 5%;
+    z-index: 2;
+    position: absolute;
+    top: 18%;
+    left: 1%;
+}
+
+.estrela-verde4 {
+    width: 5%;
     z-index: 2;
     position: absolute;
     bottom: 5%;
-    left: 5%;
+    right: 2%;
 }
+
+.estrela-verde5 {
+    width: 5%;
+    z-index: 2;
+    position: absolute;
+    bottom: 10%;
+    right: 5%;
+}
+
+.estrela-verde6 {
+    width: 5%;
+    z-index: 2;
+    position: absolute;
+    bottom: 13%;
+    right: 1%;
+}
+
+
 /* Aqui começa a galeria.html */
 
 .pagina-galeria {

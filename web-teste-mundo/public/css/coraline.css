@@ -251,8 +251,8 @@
     font-size: 40px;
     margin-top: 100px;
     margin-left: 100px;
-    width: 82%;
-    height: 400px;
+    width: 85%;
+    height: 70%;
 }
 
 .bloco4 .spink_forcible {
@@ -272,6 +272,9 @@
     background-color: #e8bb77;
     height: 100vh;
     position: relative;
+    display: flex;
+    justify-content: center;
+    text-align: center;
 }
 
 .bloco5 .bobinsky {
@@ -286,6 +289,13 @@
     position: absolute;
     left: 2%;
     top: 5%;
+}
+
+.bloco5 .texto-bobinsky {
+    font-size: 40px;
+    margin-top: 15%;
+    width: 60%;
+    height: 400px;
 }
 
 p {
