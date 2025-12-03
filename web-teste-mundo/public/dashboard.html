@@ -81,8 +81,8 @@
 
     <img class="agulha" src="assets/img/agulha.png">
     <img class="chave-libelula1" src="assets/img/chave libelula.png">
-  <!--   <img class="chave-libelula2" src="assets/img/chave libelula.png"> -->
-    <!-- <img class="espiral" src="assets/img/aspiral verde.png"> -->
+   <!--  <img class="chave-libelula2" src="assets/img/chave libelula.png"> -->
+    <img class="espiral" src="assets/img/aspiral verde.png">
     <!-- <img class="botao-verde" src="assets/img/botao verde.png"> -->
     <img class="estrela-verde1" src="assets/img/estrela verde.png">
     <img class="estrela-verde2" src="assets/img/estrela verde.png">
@@ -90,6 +90,7 @@
     <img class="estrela-verde4" src="assets/img/estrela verde.png">
     <img class="estrela-verde5" src="assets/img/estrela verde.png">
     <img class="estrela-verde6" src="assets/img/estrela verde.png">
+    <img class="amuleto_verde" src="assets/img/amuleto verde.png">
 
 </body>
 
@@ -159,8 +160,7 @@
     // para, quando carregar o gráfico da primeira vez, já trazer com vários dados.
     // A função *obterDadosGrafico* também invoca a função *plotarGrafico*
 
-    //     Se quiser alterar a busca, ajuste as regras de negócio em src/controllers
-    //     Para ajustar o "select", ajuste o comando sql em src/models
+ 
     function obterDadosGrafico(idUsuario) {
 
         fetch(`/resultados/exibirResultado/${idUsuario}`, {

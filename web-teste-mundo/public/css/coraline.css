@@ -261,13 +261,6 @@
     position: absolute;
 }
 
-.bloco4 .amuleto_verde {
-    height: 200px;
-    position: absolute;
-    top: 15%;
-    left: 5%;
-}
-
 .bloco5 {
     background-color: #e8bb77;
     height: 100vh;
