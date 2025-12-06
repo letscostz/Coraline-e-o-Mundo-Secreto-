@@ -1,6 +1,6 @@
 var database = require("../database/config");
 
-function inserirResultado(idUsuario, qtdAcertos) { // variavel definição
+function inserirResultado(idUsuario, qtdAcertos) { 
 
     console.log("ACESSEI O RESULTADO MODEL");
 
@@ -21,7 +21,7 @@ function exibirResultado(idUsuario, limite_linhas) {
 
 }
 
-function contarTentativas(idUsuario) {
+function contarTentativas(idUsuario) { 
 
     console.log("ACESSEI O CONTAR TENTATIVAS");
 
